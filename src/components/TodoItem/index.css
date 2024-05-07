@@ -1,0 +1,62 @@
+/* Write your CSS here */
+
+.todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.todo:has(+ .todo) {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.flex > p[data-check='true'] {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 3px;
+}
+
+.btn {
+  border: 1px solid #ff0b37;
+  font-family: 'Roboto';
+  font-size: medium;
+  color: #ff0b37;
+  background-color: transparent;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  outline: none;
+}
+
+.edit-input {
+  background-color: transparent;
+  padding-block: 14px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+.blue {
+  background-color: rgb(115, 115, 228);
+  color: white;
+  border: none;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
